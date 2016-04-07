@@ -9,9 +9,9 @@ NEJ.define([
         restrict: 'E',
         templateUrl: '/js/directives/fmDeliverTo.html',
         scope: {},
-        controller: function FmDeliverToController($scope, customer) {
+        controller: ['$scope', 'customer', function FmDeliverToController($scope, customer) {
           $scope.customer = customer;
-        }
+        }]
       };
     });
 
