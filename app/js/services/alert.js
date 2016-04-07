@@ -1,3 +1,7 @@
-'use strict';
+NEJ.define([
+    '{pro}app.js'
+], function(foodMeApp) {
 
-foodMeApp.value('alert', window.alert);
+    foodMeApp.value('alert', window.alert);
+
+});
