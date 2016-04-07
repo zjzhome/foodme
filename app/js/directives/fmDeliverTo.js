@@ -1,6 +1,7 @@
 
 NEJ.define([
-    '{pro}app.js'
+    '{pro}app.js',
+    '{pro}services/customer.js'
 ], function(foodMeApp) {
 
     foodMeApp.directive('fmDeliverTo', function() {

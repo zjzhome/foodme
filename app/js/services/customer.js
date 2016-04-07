@@ -1,8 +1,9 @@
 NEJ.define([
-    '{pro}app.js'
+    '{pro}app.js',
+    '{pro}services/localStorage.js'
 ], function(foodMeApp) {
 
-  foodMeApp.factory('customer', function($rootScope, localStorage) {
+  foodMeApp.factory('customer',['$rootScope', 'localStorage', function($rootScope, localStorage) {
 
     var LOCAL_STORAGE_ID = 'fmCustomer',
         customerString = localStorage[LOCAL_STORAGE_ID];
@@ -17,6 +18,6 @@ NEJ.define([
     }, true);
 
     return customer;
-  });
+  }]);
 
 });

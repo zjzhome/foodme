@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>FoodMe</title>
+<link rel="stylesheet" href="/cjs/pt_index.css?8a20fe1e603c52fdd8b1ba0f2b5c4eef"/>
+</head>
+<body>
+<div class="container">
+<div class="navbar" ng-controller="NavbarController">
+<div class="navbar-inner">
+<a class="brand" href="#/">FoodMe</a>
+<ul class="nav">
+<li ng-class="{active: routeIs('/')}"><a href="#/">Home</a></li>
+<li ng-class="{active: routeIs('/how-it-works')}"><a href="#/how-it-works">How it works</a></li>
+<li ng-class="{active: routeIs('/who-we-are')}"><a href="#/who-we-are">Who we are</a></li>
+</ul>
+<ul class="nav pull-right">
+<li ng-class="{active: routeIs('/help')}"><a href="#/help">Help</a></li>
+</ul>
+</div>
+</div>
+<ng-view></ng-view>
+</div>
+<script src="/cjs/pt_index.js?5a3dd6fad10145e269bd3a5b7feaf815"></script>
+</body>
+</html>

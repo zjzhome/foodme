@@ -1,8 +1,7 @@
 NEJ.define(function() {
 
-  var foodMeApp = angular.module('foodMeApp', ['ngRoute', 'ngResource']);
-
-  foodMeApp.config(function($routeProvider) {
+  return angular.module('foodMeApp', ['ngRoute', 'ngResource'])
+    .config(['$routeProvider', function($routeProvider) {
 
     $routeProvider.
         when('/', {
@@ -34,7 +33,6 @@ NEJ.define(function() {
         when('/help', {
           templateUrl: '/views/help.html'
         });
-  });
+  }]);
 
-  return foodMeApp;
 });

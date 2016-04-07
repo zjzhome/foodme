@@ -5,7 +5,7 @@ NEJ.define([
     '{pro}services/customer.js'
 ], function(foodMeApp) {
 
-  foodMeApp.controller('CheckoutController',
+  foodMeApp.controller('CheckoutController', ['$scope', 'cart', 'customer', '$location',
       function CheckoutController($scope, cart, customer, $location) {
 
     $scope.cart = cart;
@@ -22,5 +22,6 @@ NEJ.define([
         $location.path('thank-you').search({orderId: orderId});
       });
     };
-  });
+  }]);
+
 });

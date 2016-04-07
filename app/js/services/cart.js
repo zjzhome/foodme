@@ -5,7 +5,7 @@ NEJ.define([
   '{pro}services/alert.js'
 ], function(foodMeApp) {
 
-  foodMeApp.service('cart', function Cart(localStorage, customer, $rootScope, $http, alert) {
+  foodMeApp.service('cart', ['localStorage', 'customer', '$rootScope', '$http', 'alert', function Cart(localStorage, customer, $rootScope, $http, alert) {
     var self = this;
 
 
@@ -94,6 +94,6 @@ NEJ.define([
           },
           true);
     }
-  });
+  }]);
 
 });

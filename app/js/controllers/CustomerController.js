@@ -4,7 +4,7 @@ NEJ.define([
     '{pro}services/customer.js'
 ], function(foodMeApp) {
 
-    foodMeApp.controller('CustomerController',
+    foodMeApp.controller('CustomerController', ['$scope', 'customer', '$location',
         function CustomerController($scope, customer, $location) {
 
       $scope.customerName = customer.name;
@@ -17,6 +17,6 @@ NEJ.define([
 
         $location.url('/');
       };
-    });
+    }]);
 
 });

@@ -8,7 +8,7 @@ NEJ.define([
     '{pro}directives/fmRating.js'
 ], function(foodMeApp) {
 
-  foodMeApp.controller('RestaurantsController',
+  foodMeApp.controller('RestaurantsController', ['$scope', 'customer', '$location', 'Restaurant',
       function RestaurantsController($scope, customer, $location, Restaurant) {
 
     if (!customer.address) {
@@ -95,6 +95,6 @@ NEJ.define([
       vegetarian: 'Vegetarian'
     };
 
-  });
+  }]);
 
 });

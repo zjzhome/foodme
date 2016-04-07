@@ -7,3 +7,7 @@ build.xml
 .settings
 .idea/*
 node_modules/
+
+app/cjs/
+app/pub/
+app/deploy/*.log

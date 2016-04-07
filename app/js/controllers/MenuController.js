@@ -5,12 +5,12 @@ NEJ.define([
     '{pro}services/cart.js'
 ], function(foodMeApp) {
 
-    foodMeApp.controller('MenuController',
+    foodMeApp.controller('MenuController', ['$scope', '$routeParams', 'Restaurant', 'cart',
         function MenuController($scope, $routeParams, Restaurant, cart) {
 
       $scope.restaurant = Restaurant.get({id: $routeParams.restaurantId});
       $scope.cart = cart;
 
-    });
+    }]);
 
 });
